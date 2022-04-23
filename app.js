@@ -14,6 +14,7 @@ function startThisBajzel() {
         
         } else if (input === 'B') {
             console.log("weszlo do B")
+            let budget = new Budget();
         }
 
         input = prompt("What else?");
@@ -104,8 +105,6 @@ class Budget {
     }
 
 }
-
-let budget = new Budget();
 
 // <----------------------- CALENDAR part
 
