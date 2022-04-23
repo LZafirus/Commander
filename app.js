@@ -108,3 +108,40 @@ class Budget {
 
 // <----------------------- CALENDAR part
 
+class Task {
+    constructor(taskDate, taskDescription){
+        this.taskDate = taskDate;
+        this.taskDescription = taskDescription;
+    }
+}
+
+class TasksList {
+    taskList = [];
+
+    addTask(task){
+        this.taskList.push(task);
+    }
+
+    deleteTask(index){
+        this.taskList.splice(index, 1);
+    }
+
+    updateTask(index, taskDate, taskDescription){
+        this.taskList[index] = new Task(taskDate, taskDescription);
+    }
+
+    readTasks(){
+        this.taskList.forEach(element =>{
+            console.log(element)
+        });
+    }
+}
+
+/*
+
+class Calendar ?
+
+
+
+
+*/
