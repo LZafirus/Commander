@@ -1,24 +1,27 @@
 // <------------------- TALKING part
-console.log("Welcome!");
 
-let input = prompt("What would you like to do?");
+function startThisBajzel() {
 
-while(input !== 'Q' && input !== 'q' && input !== 'quit'){
+    console.log("Welcome!");
 
-    console.log("weszlo po while")
-    if(input === 'S' || input === 's' || input === 'shopping list') {
-        console.log("weszlo do S")
+    let input = prompt("What would you like to do?");
+
+    while(input !== 'Q' && input !== 'q' && input !== 'quit'){
+
+        console.log("weszlo po while")
+        if(input === 'S' || input === 's' || input === 'shopping list') {
+            console.log("weszlo do S")
         
-    } else if (input === 'B') {
-        console.log("weszlo do B")
+        } else if (input === 'B') {
+            console.log("weszlo do B")
+        }
+
+        input = prompt("What else?");
     }
 
-    input = prompt("What else?");
+    console.log("App closed.")
+
 }
-
-console.log("App closed.")
-
-
 
 // <------------------ SHOPPING part
 
