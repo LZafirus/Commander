@@ -8,8 +8,6 @@
     <title>Commander</title>
   </head>
   <body>
-    <script src="app.js"></script>
-
     <section class="section-one">
       <div class="navigator-wrapper">
         <nav class="navigator">
@@ -96,26 +94,29 @@
       <div class="shopping-list-div">
         <h3>Shopping List</h3>
         <p>
-          <label>Add item:</label><br />
-          <input
-            type="text"
-            placeholder="Name"
-            id="shoppingItem"
-            name="shoppingList"
-          />
-          <input
-            type="number"
-            placeholder="Quantity"
-            id="shoppingItemQuantity"
-            name="shoppingList"
-          />
-          <button type="submit">Add</button>
-          <br /><button type="button" href="">Details</button>
+          <form id="shoppingList">
+            <label>Add item:</label><br />
+            <input
+              type="text"
+              placeholder="Name"
+              id="shoppingItem"
+              name="shoppingList"
+            />
+            <input
+              type="number"
+              placeholder="Quantity"
+              id="shoppingItemQuantity"
+              name="shoppingList"
+            />
+            <button type="submit" id="SLButtonAdd">Add</button>
+            <br /><button type="button">Details</button>
+          </form>
         </p>
       </div>
 
       <br />
       <div class="calendar">Calendar..</div>
     </section>
+    <script src="app.js"></script>
   </body>
 </html>

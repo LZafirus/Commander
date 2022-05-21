@@ -1,3 +1,4 @@
+
 // <------------------- TALKING part
 
 function startThisBajzel() {
@@ -26,9 +27,17 @@ function startThisBajzel() {
 
 // <------------------ SHOPPING part
 
-// const shoppingList = {
-//     items: []
-// }
+const shoppingList = [];
+const fromSL = document.querySelector('#shoppingList');
+const inputSLI = document.querySelector('#shoppingItem');
+const inputSLQ = document.querySelector('#shoppingItemQuantity');
+
+fromSL.addEventListener('submit', function (e){
+    e.preventDefault(); 
+    addToList(inputSLI.value, inputSLQ.value);
+    inputSLI.value='';
+    inputSLQ.value='';
+});
 
 class ShoppingItem {
     constructor(itemName, itemQuantity){
