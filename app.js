@@ -38,11 +38,6 @@ class ShoppingItem {
     }
 }
 
-let shoppingList = [];
-addToList('pierwszy', 1);
-addToList('drugi', 2);
-addToList('trzeci', 3);
-
 function addToList(name, quantity) {
     const shoppingItem = new ShoppingItem(name, quantity);
     return shoppingList.push(shoppingItem);
