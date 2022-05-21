@@ -81,8 +81,8 @@ class Budget {
     constructor(){
     }
 
-    addSpending(spending){
-        this.spendings.push(spending);
+    addSpending(spendingDesc, amount){
+        this.spendings.push([spendingDesc, amount]);
     }
 
     sumSpendings(spendings){
@@ -90,8 +90,8 @@ class Budget {
         return sum;
     }
 
-    addFixedExpenses(expense){
-        this.fixedExpenses.push(expense);
+    addFixedExpenses(expenseDesc, expenseAmount){
+        this.fixedExpenses.push([expenseDesc, expenseAmount]);
     }
 
     sumExpenses(spendings){
@@ -109,6 +109,41 @@ class Budget {
     }
 
 }
+
+const budget = new Budget();
+
+// spending values
+const spendingDesc = document.querySelector('#spendingDesc');
+const spendingAmount = document.querySelector('#spendingAmount');
+const spendingAddBtn = document.querySelector('#spendingBtn');
+
+spendingAddBtn.addEventListener('click', function(){
+    budget.addSpending(spendingDesc.value, spendingAmount.value);
+    spendingDesc.value = '';
+    spendingAmount.value = '';
+});
+
+//fixed expenses values
+const fixedExpDesc = document.querySelector('#fixedExpenseDesc');
+const fixedExpAmount = document.querySelector('#fixedExpenseAmount');
+const fixedExpBtn = document.querySelector('#fixedExpBtn');
+
+fixedExpBtn.addEventListener('click', function(){
+    budget.addFixedExpenses(fixedExpDesc.value, fixedExpAmount.value);
+    fixedExpDesc.value = '';
+    fixedExpAmount.value = '';
+});
+
+//income values
+const incomeDesc = document.querySelector('#incomeDesc');
+const incomeAmount = document.querySelector('#incomeAmount');
+const incomeBtn = document.querySelector('#fixedExpBtn');
+
+incomeBtn.addEventListener('click', function(){
+    budget.addFixedExpenses(incomeDesc.value, incomeAmount.value);
+    incomeDesc.value = '';
+    incomeAmount.value = '';
+});
 
 // <----------------------- CALENDAR part
 
