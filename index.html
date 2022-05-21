@@ -2,15 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Background</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Commander</title>
   </head>
   <body>
-    <section><h1>Legend:</h1></section>
-    <div>
-      <li>S / s / shopping list</li>
-      <li>B / b / budget</li>
-      <li>Q / q / quite</li>
-    </div>
     <script src="app.js"></script>
+
+    <section class="section-one">
+      <div class="navigator-wrapper">
+        <nav class="navigator">
+          <ul class="navigation-list">
+            <li class="navigation-list-item">
+              <a class="link" href="">Home budget</a>
+            </li>
+            <li class="navigation-list-item">
+              <a class="link" href="">To-do list</a>
+            </li>
+            <li class="navigation-list-item">
+              <a class="link" href="">Something.. </a>
+            </li>
+            <li class="navigation-list-item">
+              <a class="link" href="">.. more..</a>
+            </li>
+            <li class="navigation-list-item">
+              <a class="link" href="">.. and more.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="budget-div">
+        <p>
+          <label>Add spending:</label><br />
+          <input
+            type="text"
+            placeholder="Desc."
+            id="spendingDesc"
+            name="spending"
+          />
+          <input
+            type="number"
+            placeholder="Amount"
+            id="spendingAmount"
+            name="spending"
+          />
+          <button type="submit">Add</button>
+        </p>
+
+        <p>
+          <label for="fixedExpense">Add fixed expense:</label><br />
+          <input
+            type="text"
+            placeholder="Desc."
+            id="fixedExpenseDesc"
+            name="fixedExpense"
+          />
+          <input
+            type="number"
+            placeholder="Amount"
+            id="fixedExpenseAmount"
+            name="fixedExpense"
+          />
+          <button type="submit">Add</button>
+        </p>
+
+        <p><label for</p>
+      </div>
+
+      <br />
+      <div class="shopping-list-div">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        consequuntur deserunt ipsam quaerat deleniti est asperiores alias nihil
+        non voluptas quo accusamus sunt, similique reprehenderit atque.
+        Molestiae nesciunt dolores ut.
+      </div>
+
+      <div class="calendar-div">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        consequuntur deserunt ipsam quaerat deleniti est asperiores alias nihil
+        non voluptas quo accusamus sunt, similique reprehenderit atque.
+        Molestiae nesciunt dolores ut.
+      </div>
+    </section>
   </body>
 </html>
