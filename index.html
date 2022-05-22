@@ -46,6 +46,7 @@
             placeholder="Amount"
             id="spendingAmount"
             name="spending"
+            min="0"
           />
           <button type="submit" id="spendingBtn">Add</button>
         </p>
@@ -63,6 +64,7 @@
             placeholder="Amount"
             id="fixedExpenseAmount"
             name="fixedExpense"
+            min="0"
           />
           <button type="submit" id="fixedExpBtn">Add</button>
         </p>
@@ -74,8 +76,9 @@
             placeholder="Amount"
             id="incomeAmount"
             name="income"
+            min="0"
           />
-          <button type="submit" id="incomeBtn">Add</button>
+          <button type="submit" id="incomeBtn">Set</button>
         </p>
 
         <p>
@@ -101,6 +104,7 @@
               placeholder="Quantity"
               id="shoppingItemQuantity"
               name="shoppingList"
+              min="1"
             />
             <button type="submit" id="SLButtonAdd">Add</button>
             <br /><button type="button">Details</button>
@@ -109,7 +113,7 @@
       </div>
 
       <br />
-      <div class="calendar">Calendar..</div>
+      <div class="calendar">Calendar and tasks..</div>
     </section>
     <script src="app.js"></script>
   </body>

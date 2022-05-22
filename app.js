@@ -34,7 +34,7 @@ const inputSLQ = document.querySelector('#shoppingItemQuantity');
 
 fromSL.addEventListener('submit', function (e){
     e.preventDefault(); 
-    addToList(inputSLI.value, inputSLQ.value);
+    addToList(inputSLI.value, parseInt(inputSLQ.value));
     inputSLI.value='';
     inputSLQ.value='';
 });
@@ -85,8 +85,11 @@ class Budget {
         this.spendings.push([spendingDesc, amount]);
     }
 
-    sumSpendings(spendings){
-        let sum = spendings.reduce((a,b) => a+b, 0);
+    sumSpendings(){
+        let sum = 0;
+        for (let index = 0; index < budget.spendings.length; index++) {
+            sum += budget.spendings[index][1];
+        }
         return sum;
     }
 
@@ -94,9 +97,12 @@ class Budget {
         this.fixedExpenses.push([expenseDesc, expenseAmount]);
     }
 
-    sumExpenses(spendings){
-        let sum = spendings.reduce((a,b) => a + b, 0);
-        return sum;
+    sumExpenses(){
+        let sumE = 0;
+        for (let index = 0; index < budget.fixedExpenses.length; index++) {
+            sumE += budget.fixedExpenses[index][1];
+        }
+        return sumE;
     }
 
     balanceCalculator(){
@@ -118,7 +124,7 @@ const spendingAmount = document.querySelector('#spendingAmount');
 const spendingAddBtn = document.querySelector('#spendingBtn');
 
 spendingAddBtn.addEventListener('click', function(){
-    budget.addSpending(spendingDesc.value, spendingAmount.value);
+    budget.addSpending(spendingDesc.value, parseInt(spendingAmount.value));
     spendingDesc.value = '';
     spendingAmount.value = '';
 });
@@ -129,18 +135,17 @@ const fixedExpAmount = document.querySelector('#fixedExpenseAmount');
 const fixedExpBtn = document.querySelector('#fixedExpBtn');
 
 fixedExpBtn.addEventListener('click', function(){
-    budget.addFixedExpenses(fixedExpDesc.value, fixedExpAmount.value);
+    budget.addFixedExpenses(fixedExpDesc.value, parseInt(fixedExpAmount.value));
     fixedExpDesc.value = '';
     fixedExpAmount.value = '';
 });
 
-//income values
+//income value
 const incomeAmount = document.querySelector('#incomeAmount');
 const incomeBtn = document.querySelector('#incomeBtn');
 
 incomeBtn.addEventListener('click', function(){
-    budget.setIncome(incomeAmount.value);
-    incomeDesc.value = '';
+    budget.setIncome(parseInt(incomeAmount.value));
     incomeAmount.value = '';
 });
 
