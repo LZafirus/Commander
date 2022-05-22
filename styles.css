@@ -1,8 +1,56 @@
-/* html {
+html {
     scroll-behavior: smooth;
 }
 
 body {
+    height: 100vh;
+    background: linear-gradient(to right bottom, gold, chocolate);
+    line-height: 1.3;
+    font-family: Copperplate,Copperplate Gothic Light,fantasy;
+}
+
+img {
+    width: 50px;
+}
+
+.section-one {
+    position: fixed;
+    width: 100px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+    background-color: #202020;
+    overflow: hidden;
+    transition: width .3s ease;
+    cursor: pointer;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+    flex-direction: column;
+    text-align: left;
+}
+
+.navigation-list-item {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.section-one:hover {
+    width: 250px;
+}
+
+.section-two {
+    margin-left: 100px;
+    border-color: black;
+}
+
+section {
+    color: black;
+    list-style-type: none;
+}
+
+
+
+/* body {
     font-family: "Roboto", sans-serif;
     display: flex;
     background-color: #151b29;

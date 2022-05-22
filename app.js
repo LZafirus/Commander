@@ -43,7 +43,6 @@ class ShoppingItem {
     constructor(itemName, itemQuantity){
         this.itemName = itemName;
         this.itemQuantity = itemQuantity;
-        console.log(`To buy: ${this.itemName}, quantity: ${this.itemQuantity}.`)
     }
 }
 
@@ -52,18 +51,22 @@ function addToList(name, quantity) {
     return shoppingList.push(shoppingItem);
 }
 
+//?
 function readList() {
     shoppingList.forEach(element => {
         console.log(element);
     });
 }
 
+
+//?
 function deleteItemFromList() {
     let input = parseInt(prompt(`Which item remove? Choose from 0 to ${shoppingList.length}`));
     console.log(shoppingList[input]);
     shoppingList.splice(input, 1);
 }
 
+//?
 function updateItem() {
     let inputIndex = parseInt(prompt(`Which item would you like to change? 
         Choose from 0 to ${shoppingList.length}`));
