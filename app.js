@@ -135,12 +135,11 @@ fixedExpBtn.addEventListener('click', function(){
 });
 
 //income values
-const incomeDesc = document.querySelector('#incomeDesc');
 const incomeAmount = document.querySelector('#incomeAmount');
-const incomeBtn = document.querySelector('#fixedExpBtn');
+const incomeBtn = document.querySelector('#incomeBtn');
 
 incomeBtn.addEventListener('click', function(){
-    budget.addFixedExpenses(incomeDesc.value, incomeAmount.value);
+    budget.setIncome(incomeAmount.value);
     incomeDesc.value = '';
     incomeAmount.value = '';
 });
