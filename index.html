@@ -1,90 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Commander</title>
-  </head>
-  <body>
-    <section class="section-one">
 
-        <nav class="navigator">
-          <ul class="navigation-list">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Commander</title>
+</head>
 
-            <li class="navigation-list-item">
-              <img src="assets/income.png">
-              <a>Budget</a>
-            </li>
+<body>
+  <nav class="navigator">
+    <ul class="navigation-list">
 
-            <li class="navigation-list-item">
-              <img src="assets/contract.png">
-              <a>To-do list</a>
-            </li>
+      <li class="navigation-list-item">
+        <img src="assets/income.png">
+        <a>Budget</a>
+      </li><br>
 
-            <li class="navigation-list-item">
-              <img src="assets/rice.png">
-              <a>Shopping list</a>
-            </li>
+      <li class="navigation-list-item">
+        <img src="assets/contract.png">
+        <a>To-do list</a>
+      </li><br>
 
-            <li class="navigation-list-item">
-              <img src="assets/strategy.png">
-              <a>Admin</a>
-            </li>
+      <li class="navigation-list-item">
+        <img src="assets/rice.png">
+        <a>Shopping list</a>
+      </li><br>
 
-          </ul>
-        </nav>
-        
-    </section>
-    <section class="section-two">
+      <li class="navigation-list-item">
+        <img src="assets/strategy.png">
+        <a>Admin</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
       <div class="budget-div">
         <h3>Budget</h3>
         <p>
           <label>Add spending:</label><br />
-          <input
-            type="text"
-            placeholder="Desc."
-            id="spendingDesc"
-            name="spending"
-          />
-          <input
-            type="number"
-            placeholder="Amount"
-            id="spendingAmount"
-            name="spending"
-            min="0"
-          />
+          <input type="text" placeholder="Desc." id="spendingDesc" name="spending" />
+          <input type="number" placeholder="Amount" id="spendingAmount" name="spending" min="0" />
           <button type="submit" id="spendingBtn">Add</button>
         </p>
 
         <p>
           <label>Add fixed expense:</label><br />
-          <input
-            type="text"
-            placeholder="Desc."
-            id="fixedExpenseDesc"
-            name="fixedExpense"
-          />
-          <input
-            type="number"
-            placeholder="Amount"
-            id="fixedExpenseAmount"
-            name="fixedExpense"
-            min="0"
-          />
+          <input type="text" placeholder="Desc." id="fixedExpenseDesc" name="fixedExpense" />
+          <input type="number" placeholder="Amount" id="fixedExpenseAmount" name="fixedExpense" min="0" />
           <button type="submit" id="fixedExpBtn">Add</button>
         </p>
 
         <p>
           <label>Set income:</label><br />
-          <input
-            type="number"
-            placeholder="Amount"
-            id="incomeAmount"
-            name="income"
-            min="0"
-          />
+          <input type="number" placeholder="Amount" id="incomeAmount" name="income" min="0" />
           <button type="submit" id="incomeBtn">Set</button>
         </p>
 
@@ -98,24 +68,13 @@
       <div class="shopping-list-div">
         <h3>Shopping List</h3>
         <p>
-          <form id="shoppingList">
-            <label>Add item:</label><br />
-            <input
-              type="text"
-              placeholder="Name"
-              id="shoppingItem"
-              name="shoppingList"
-            />
-            <input
-              type="number"
-              placeholder="Quantity"
-              id="shoppingItemQuantity"
-              name="shoppingList"
-              min="1"
-            />
-            <button type="submit" id="SLButtonAdd">Add</button>
-            <br /><button type="button">Details</button>
-          </form>
+        <form id="shoppingList">
+          <label>Add item:</label><br />
+          <input type="text" placeholder="Name" id="shoppingItem" name="shoppingList" />
+          <input type="number" placeholder="Quantity" id="shoppingItemQuantity" name="shoppingList" min="1" />
+          <button type="submit" id="SLButtonAdd">Add</button>
+          <br /><button type="button" id="SLDetails">Details</button>
+        </form>
         </p>
       </div>
 
@@ -123,7 +82,8 @@
       <div class="calendar">
         <h3>Calendar and tasks..</h3>
       </div>
-    </section>
     <script src="app.js"></script>
-  </body>
+  </main>
+</body>
+
 </html>

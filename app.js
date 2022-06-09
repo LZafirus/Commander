@@ -1,30 +1,3 @@
-
-// <------------------- TALKING part
-
-function startThisBajzel() {
-
-    console.log("Welcome!");
-
-    let input = prompt("What would you like to do?");
-
-    while(input !== 'Q' && input !== 'q' && input !== 'quit'){
-
-        console.log("weszlo po while")
-        if(input === 'S' || input === 's' || input === 'shopping list') {
-            console.log("weszlo do S")
-        
-        } else if (input === 'B') {
-            console.log("weszlo do B")
-            let budget = new Budget();
-        }
-
-        input = prompt("What else?");
-    }
-
-    console.log("App closed.")
-
-}
-
 // <------------------ SHOPPING part
 
 const shoppingList = [];
@@ -50,6 +23,13 @@ function addToList(name, quantity) {
     const shoppingItem = new ShoppingItem(name, quantity);
     return shoppingList.push(shoppingItem);
 }
+
+const SLButtonDetails = document.querySelector('#SLDetails');
+
+const SLDetails = document.querySelector("#SLDetails");
+btn.addEventListener("click", e => {
+    const win = window.open("indexx.html", "target='_blank'");
+})
 
 //?
 function readList() {
